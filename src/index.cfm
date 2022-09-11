@@ -10,8 +10,8 @@
 <body>
     <div>
         <p>hello cfml!!</p>
-        <div class="log-in-container">
-            <h1>Log In</h1>
+        <div class="centered log-in-container">
+            <h1 class"centered">Log In</h1>
             <form>
                 <label for="username">User Name</label>
                 <input type="text" name="username" id="username">

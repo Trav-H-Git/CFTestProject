@@ -17,11 +17,17 @@ body {
     background-color: var(--bg-color);
 }
 
+.centered{
+    margin: 0 auto;
+}
+
 .log-in-container{
     background-color: var(--white);
     padding: 1em 1em;
-    margin: 0 auto;
     width: 20rem;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px gray;
+
 }
 
 @media only screen and (min-width: 300px){
