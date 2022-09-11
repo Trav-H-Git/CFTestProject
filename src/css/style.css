@@ -9,7 +9,6 @@
 *::after{
     padding: 0;
     margin: 0;
-    font: inherit;
     box-sizing: border-box;
 }
 
@@ -17,14 +16,31 @@ body {
     background-color: var(--bg-color);
 }
 
-.centered{
+.heading {
+    text-align: center;
+}
+.center{
     margin: 0 auto;
+    width: 100%;
+}
+
+label {
+    text-align: start;
+    margin: 0;
+    padding-bottom: .25em;
+    padding-top: .25em;
+    display: inline-block;
+    
+}
+
+form{
+    margin: 0 2em;
 }
 
 .log-in-container{
     background-color: var(--white);
     padding: 1em 1em;
-    width: 20rem;
+    width: 30rem;
     border-radius: 2px;
     box-shadow: 1px 1px 3px gray;
 

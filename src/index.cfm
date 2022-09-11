@@ -9,9 +9,8 @@
 </head>
 <body>
     <div>
-        <p>hello cfml!!</p>
-        <div class="centered log-in-container">
-            <h1 class"centered">Log In</h1>
+        <div class="center log-in-container">
+            <h1 class="heading">Log In</h1>
             <form>
                 <label for="username">User Name</label>
                 <input type="text" name="username" id="username">
@@ -23,6 +22,7 @@
                     <option value="canada">Canada</option>
                     <option value="usa">USA</option>
                 </select>
+                <input type="submit">
             </form>
         </div>
          
