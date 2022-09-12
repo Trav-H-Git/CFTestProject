@@ -19,23 +19,19 @@ body {
 .heading {
     text-align: center;
 }
+
 .center{
     margin: 0 auto;
     width: 100%;
 }
 
+
+
 label {
     text-align: start;
-    margin: 0;
-    padding-bottom: .25em;
-    padding-top: .25em;
-    display: inline-block;
     
 }
 
-form{
-    margin: 0 2em;
-}
 
 .log-in-container{
     background-color: var(--white);
@@ -46,14 +42,4 @@ form{
 
 }
 
-@media only screen and (min-width: 300px){
-    .log-in-container{
-        
-    }
-}
 
-input,
-select{
-    display: inline-block;
-    width: 100%;
-}
