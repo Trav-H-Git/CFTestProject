@@ -1,0 +1,17 @@
+USE cfusers ;
+CREATE TABLE person(
+	person_id int NOT NULL AUTO_INCREMENT,
+	person_first_name VARCHAR(255),
+	person_ast_name VARCHAR(255),
+	person_email VARCHAR(255),
+	person_password VARCHAR(255),
+	CONSTRAINT pk_person_id PRIMARY KEY (person_id)
+);
+
+CREATE TABLE access(
+	access_id int NOT NULL AUTO_INCREMENT,
+	access_role VARCHAR(255),
+	access_person_id int NOT NULL,
+	CONSTRAINT pk_access_id PRIMARY KEY (access_id),
+	CONSTRAINT fk_person_access_id FOREIGN KEY (access_person_id) REFERENCES person(person_id)
+);

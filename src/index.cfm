@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-     <div class="center log-in-container">
-         <h1 class="heading">Log In</h1>
-         <div class="center">
-             <cfform>
-                 <label for="username">User Name</label>
-                 <input type="text" name="username" id="username">
-                 <label for="pass">Password </label>
-                 <input type="password" name="pass" id="pass">
-                 <input type="submit">
-             </cfform>
+    <div class="grid-row-1">
+         <div class="log-in-container">
+             <h1 class="center-text">Log In</h1>
+                <cfform autocomplete="off">
+                    <div class="form-container">
+                         <input type="text" name="username" id="username" placeholder="Email">
+                         <input type="password" name="pass" id="pass" placeholder="Password">
+                         <input class="btn" role="submit" type="submit">
+                         <hr>
+                         <button class="btn" role="register">Request Account</button>
+                    </div>
+                </cfform>
+
          </div>
-     </div>
+    </div>
 </body>
 </html>
