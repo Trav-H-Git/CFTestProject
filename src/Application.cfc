@@ -46,6 +46,7 @@ component {
 	
 	boolean function onApplicationStart(){
         application.logInComp = createObject("component", "CFTestProject/src/components/logInComp");
+		application.arrayErrors = arrayNew(1);
         return true;
 	}
 
@@ -62,7 +63,7 @@ component {
 	}
 
 	boolean function onRequestStart(string targetPage) {
-        if (isDefined("url.restarApp")) {
+        if (isDefined("url.new")) {
             onApplicationStart();
         }
         include targetPage;
@@ -71,6 +72,7 @@ component {
 	}
 
 	void function onRequestEnd(string targetPage) {
+		//arrayClear(application.arrayErrors);
 
 	}
 
