@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <p>welcome</p>
+    <cfinclude template="includes/nav.cfm" />
+    
+    <p>body</p>
     <cfdump var="#form#"/>
 </body>
 </html>

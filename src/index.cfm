@@ -11,11 +11,12 @@
     <div class="grid-row-1">
          <div class="log-in-container">
              <h1 class="center-text">Log In</h1>
-                <cfform autocomplete="off" method="post" action="home.cfm">
+            
+                <cfform autocomplete="off" method="post" action="home.cfm" preservedata="true">
                     <div class="form-container">
-                         <input type="text" name="username" id="username" placeholder="Email">
-                         <input type="password" name="pass" id="pass" placeholder="Password">
-                         <input class="btn" role="submit" type="submit">
+                         <cfinput type="text" name="loginEmail" id="loginEmail" placeholder="Email">
+                         <cfinput type="password" name="loginPass" id="loginPass" placeholder="Password">
+                         <cfinput class="btn" role="submit" type="submit" name="loginSubmit" id="loginSubmit" value="Login">
                          <hr>
                          <button class="btn" role="register">Request Account</button>
                     </div>
