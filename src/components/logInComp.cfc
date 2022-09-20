@@ -21,18 +21,21 @@
         <cfargument name="userPassword" type="string" required="true" />
 
         <cfset var isUserLoggedIn = false />
-        <cfquery name="rsUser">
-            SELECT person_id, person_first_name, person_last_name, person_email, person_password, person_role
-            FROM person
-            WHERE person_email = #arguments.userEmail# AND person_password = #arguments.userPassword#
+        <cfquery name="rsUser" datasource="cfusers">
+        SELECT person_id, person_first_name, person_last_name, person_email, person_password, person_role
+        FROM cfusers.person
+        WHERE person_email = "#arguments.userEmail#"
+        AND person_password = "#arguments.userPassword#"
         </cfquery>
 
+       
         <cfif rsUser.recordCount EQ 1>
             <cflogin>
-                <cfloginuser name="#rsUser.person_last_name# #rsUser.person_last_name#" password="#rsUser.password#" roles="#rsUser.role#" />
+                <cfloginuser name="#rsUser.person_last_name# #rsUser.person_last_name#" password="#rsUser.person_password#" roles="#rsUser.person_role#" />
             </cflogin>
             <cfset session.stUser = {'user_first_name' = rsUser.person_first_name, 'user_last_name' = rsUser.person_last_name, 'user_id' = rsUser.person_id} />
             <cfset var isUserLoggedIn = true />
+        
         </cfif>
 
         
