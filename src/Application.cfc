@@ -5,7 +5,7 @@ component {
 	this.applicationTimeout = createTimeSpan(0, 1, 0, 0);
     this.sessionManagement = true;
     this.sessionTimeout = createTimeSpan(0, 0, 30, 0);
-    this.datasource = "cfUser";
+    this.datasource = "cfusers";
 
 
 
@@ -89,7 +89,7 @@ component {
 	// }
 
 	void function onAbort(string targetPage) {
-		dump("request "&targetPage&" ended with a abort!");
+		//dump("request "&targetPage&" ended with a abort!");
 	}
 
 	void function onDebug(struct debuggingData) {

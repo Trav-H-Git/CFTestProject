@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    
     <div class="grid-row-1">
-         <div class="log-in-container">
+        <cfinclude template="includes/verification.cfm"/>
+        <div class="log-in-container">
              <h1 class="center-text">Log In</h1>
             
-                <cfform autocomplete="off" method="post" action="home.cfm" preservedata="true">
+                <cfform autocomplete="off" method="post" preservedata="true">
                     <div class="form-container">
                          <cfinput type="text" name="loginEmail" id="loginEmail" placeholder="Email">
                          <cfinput type="password" name="loginPass" id="loginPass" placeholder="Password">

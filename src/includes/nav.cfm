@@ -1,4 +1,3 @@
-<cfinclude template="authorization.cfm"/>
 <nav class="main-nav">
     <h1>Website</h1>
     
