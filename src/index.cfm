@@ -10,10 +10,8 @@
 </head>
 <body>
     
-    <main class="main-content">
-        <div class="flex-col">
-
-            <cfinclude template="includes/verification.cfm"/>
+    <main class="main-content flex-col">
+        <cfinclude template="includes/verification.cfm"/>
             <div class="log-in-container def-card">
                 <h1 class="center-text">Log In</h1>
                 
@@ -27,9 +25,9 @@
                      </div>
                 </cfform>
                     
-            </div>
-        </div>
+            </div> 
     </main>
+    <script src="js/myScripts.js"></script>
 </body>
-<script src="js/myScripts.js"></script>
+
 </html>

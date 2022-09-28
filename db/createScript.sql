@@ -24,14 +24,14 @@ CREATE TABLE person(
 	person_email VARCHAR(255),
 	person_password VARCHAR(255),
 	person_fave_color INT,
-	person_role ENUM('regular_user', 'admin_user', 'awaiting_aprroval'),
+	person_role ENUM('regular', 'admin', 'awaitingAprroval'),
 	CONSTRAINT pk_person_id PRIMARY KEY (person_id),
 	CONSTRAINT fk_person_color_id FOREIGN KEY (person_fave_color) REFERENCES color(color_id)
 );
 INSERT INTO person (person_first_name, person_last_name, person_email, person_password, person_fave_color, person_role) 
-VALUES ('john', 'admin', 'john@email.com', 'pwd', 1, 'admin_user');
+VALUES ('john', 'admin', 'john@email.com', 'pwd', 1, 'admin');
 INSERT INTO person (person_first_name, person_last_name, person_email, person_password, person_fave_color, person_role) 
-VALUES ('joe', 'regular', 'joe@email.com', 'pwd', 2, 'regular_user');
+VALUES ('joe', 'regular', 'joe@email.com', 'pwd', 2, 'regular');
 
 -- CREATE TABLE access(
 -- 	access_id INT NOT NULL AUTO_INCREMENT,
