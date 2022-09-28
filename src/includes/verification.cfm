@@ -21,7 +21,7 @@
 <!---display errors --->
 <cfloop index="i" item="item" array="#arrayErrors#"> 
     <div class="alert">
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
         <cfoutput>#item#</cfoutput> 
+        <span class="alert-closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
     </div>
 </cfloop>

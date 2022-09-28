@@ -11,7 +11,7 @@ CREATE TABLE color(
 	CONSTRAINT pk_color_id PRIMARY KEY (color_id)
 );
 INSERT INTO color (color_id, color_name, color_red, color_green, color_blue) 
-VALUES (1, 'red', 255, 0, 100);
+VALUES (1, 'red', 255, 0, 0);
 INSERT INTO color (color_id, color_name, color_red, color_green, color_blue) 
 VALUES (2, 'green',0, 255, 0);
 INSERT INTO color (color_id, color_name, color_red, color_green, color_blue) 

@@ -28,12 +28,15 @@
         AND person_password = "#arguments.userPassword#"
         </cfquery>
 
+        
        
         <cfif rsUser.recordCount EQ 1>
             <cflogin>
                 <cfloginuser name="#rsUser.person_last_name# #rsUser.person_last_name#" password="#rsUser.person_password#" roles="#rsUser.person_role#" />
             </cflogin>
-            <cfset session.stUser = {'user_first_name' = rsUser.person_first_name, 'user_last_name' = rsUser.person_last_name, 'user_id' = rsUser.person_id} />
+            <!---make user struct--->
+            <!---cfset session.stUser = {'user_first_name' = rsUser.person_first_name, 'user_last_name' = rsUser.person_last_name, 'user_id' = rsUser.person_id} /--->
+            <cfset session.stUser = { 'firstName' = rsUser.person_first_name, 'lastName' = rsUser.person_last_name, 'id' = rsUser.person_id}>
             <cfset var isUserLoggedIn = true />
         
         </cfif>
